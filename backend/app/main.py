@@ -39,14 +39,19 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-# CORS configuration for Next.js frontend
+# CORS configuration for Next.js frontend (supports localhost:3000, 3001, etc.)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
         "http://127.0.0.1:3000",
+        "http://localhost:3001",
+        "http://127.0.0.1:3001",
+        "http://localhost:3002",
+        "http://127.0.0.1:3002",
         "http://localhost:8000"
     ],
+    allow_origin_regex=r"https?://(localhost|127\.0\.0\.1)(:\d+)?",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -61,7 +66,7 @@ async def custom_exception_handler(request: Request, exc: InventoryAIException):
     )
 
 
-@app.get("/health", tags=["Health"])
+@app.api_route("/health", methods=["GET", "HEAD"], tags=["Health"])
 async def health_check():
     """
     Standardized API health check (Section 62 of security_prompt.txt).

@@ -83,22 +83,25 @@ export default function OverviewDashboardPage() {
 
   useEffect(() => {
     const dsId = localStorage.getItem("active_dataset_id");
-    if (dsId) {
-      setActiveDatasetId(dsId);
-      loadAll(dsId);
-    } else {
-      api.getDatasets().then((list) => {
-        if (list && list.length > 0) {
-          const firstId = list[0].id;
-          setActiveDatasetId(firstId);
-          setActiveDatasetName(list[0].name);
-          localStorage.setItem("active_dataset_id", firstId);
-          loadAll(firstId);
-        } else {
-          setLoading(false);
-        }
-      });
-    }
+    api.getDatasets().then((list) => {
+      if (list && list.length > 0) {
+        const match = list.find((d: any) => d.id === dsId);
+        const selected = match || list[0];
+        setActiveDatasetId(selected.id);
+        setActiveDatasetName(selected.name);
+        localStorage.setItem("active_dataset_id", selected.id);
+        loadAll(selected.id);
+      } else {
+        setActiveDatasetId("");
+        setActiveDatasetName("");
+        localStorage.removeItem("active_dataset_id");
+        setLoading(false);
+      }
+    }).catch(() => {
+      setActiveDatasetId("");
+      localStorage.removeItem("active_dataset_id");
+      setLoading(false);
+    });
 
     const handleDatasetChanged = () => {
       const updated = localStorage.getItem("active_dataset_id") || "";
@@ -150,21 +153,44 @@ export default function OverviewDashboardPage() {
     );
   }
 
+  const handleLoadSample = async () => {
+    setLoading(true);
+    try {
+      const sample = await api.createSampleDataset();
+      if (sample?.id) {
+        setActiveDatasetId(sample.id);
+        setActiveDatasetName(sample.name);
+        localStorage.setItem("active_dataset_id", sample.id);
+        loadAll(sample.id);
+      } else {
+        setLoading(false);
+      }
+    } catch (e) {
+      console.error("Failed to load sample dataset:", e);
+      setLoading(false);
+    }
+  };
+
   if (!activeDatasetId) {
     return (
-      <div className="max-w-md mx-auto text-center py-20 px-4">
-        <div className="h-14 w-14 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center mx-auto mb-4">
-          <Boxes className="h-7 w-7" />
+      <div className="max-w-lg mx-auto text-center py-20 px-4">
+        <div className="h-16 w-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mx-auto mb-4 border border-blue-100 shadow-sm">
+          <Boxes className="h-8 w-8" />
         </div>
-        <h2 className="text-xl font-bold text-slate-900">No Facility Dataset Connected</h2>
-        <p className="text-xs text-slate-500 mt-2 mb-6">
-          Connect your dark store inventory CSV or ERP data source to view real-time decision metrics.
+        <h2 className="text-xl font-bold text-slate-900">Your Store Workspace is Ready</h2>
+        <p className="text-xs text-slate-500 mt-2 mb-6 max-w-sm mx-auto leading-relaxed">
+          You are signed in to your personal store workspace. Connect your dark store inventory CSV or import sample quick-commerce data to explore.
         </p>
-        <Link href="/datasets/new">
-          <Button variant="primary" leftIcon={<Sparkles className="h-4 w-4" />}>
-            Create First Dataset
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <Link href="/datasets/new">
+            <Button variant="primary" leftIcon={<Sparkles className="h-4 w-4" />}>
+              Connect Your Store CSV
+            </Button>
+          </Link>
+          <Button variant="outline" onClick={handleLoadSample} leftIcon={<Layers className="h-4 w-4" />}>
+            Load Sample Store Data
           </Button>
-        </Link>
+        </div>
       </div>
     );
   }

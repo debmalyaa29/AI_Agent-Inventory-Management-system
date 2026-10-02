@@ -46,6 +46,10 @@ export const api = {
       method: "POST",
       body: JSON.stringify({ name, description }),
     }),
+  createSampleDataset: () =>
+    fetchApi("/datasets/sample", {
+      method: "POST",
+    }),
 
   // File Upload
   uploadFiles: (datasetId: string, files: File[]) => {

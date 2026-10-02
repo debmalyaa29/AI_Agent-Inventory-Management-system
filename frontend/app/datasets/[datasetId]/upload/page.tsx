@@ -8,7 +8,10 @@ import {
   ArrowRight, 
   Trash2, 
   AlertCircle,
-  FileSpreadsheet
+  FileSpreadsheet,
+  Download,
+  Sparkles,
+  Zap
 } from "lucide-react";
 import { api } from "@/lib/api";
 import { PageHeader } from "@/components/ui/PageHeader";
@@ -24,6 +27,22 @@ export default function DatasetUploadPage() {
   const [files, setFiles] = useState<File[]>([]);
   const [uploading, setUploading] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
+
+  const stageSampleDataset = async (filename: string, displayName: string) => {
+    try {
+      setUploading(true);
+      const res = await fetch(`/sample_datasets/${filename}`);
+      if (!res.ok) throw new Error("Could not fetch test dataset file");
+      const blob = await res.blob();
+      const sampleFile = new File([blob], filename, { type: "text/csv" });
+      setFiles((prev) => [...prev.filter((f) => f.name !== filename), sampleFile]);
+      setErrorMsg("");
+    } catch (err: any) {
+      setErrorMsg(`Failed to load ${displayName}: ${err.message}`);
+    } finally {
+      setUploading(false);
+    }
+  };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
@@ -77,6 +96,76 @@ export default function DatasetUploadPage() {
           <span>{errorMsg}</span>
         </div>
       )}
+
+      {/* 1-Click Ready Test Datasets Box */}
+      <div className="bg-gradient-to-r from-blue-50/80 to-indigo-50/80 border border-blue-200/80 rounded-xl p-4 space-y-3">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <div className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
+              <Sparkles className="h-4 w-4 text-blue-600" />
+              <span>Ready-to-Use Test Datasets</span>
+            </div>
+            <p className="text-[11px] text-slate-600 mt-0.5">
+              Test stockouts, negative anomalies, phantom discrepancies, and MOQ replenishment with 1 click.
+            </p>
+          </div>
+          <span className="text-[10px] font-semibold text-blue-700 bg-blue-100/80 px-2 py-0.5 rounded-full w-fit">
+            Ready in /test_datasets/
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+          <div className="flex items-center justify-between p-2.5 rounded-lg bg-white border border-slate-200 shadow-xs">
+            <div>
+              <div className="text-xs font-semibold text-slate-800">Quick-Commerce (50 SKUs)</div>
+              <div className="text-[10px] text-slate-500">Beverages, Dairy, Produce, Bakery</div>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <a
+                href="/sample_datasets/quick_commerce_darkstore_inventory.csv"
+                download="quick_commerce_darkstore_inventory.csv"
+                title="Download CSV"
+                className="p-1.5 rounded-md hover:bg-slate-100 text-slate-500 hover:text-slate-800 transition"
+              >
+                <Download className="h-3.5 w-3.5" />
+              </a>
+              <button
+                type="button"
+                onClick={() => stageSampleDataset("quick_commerce_darkstore_inventory.csv", "Quick-Commerce")}
+                className="px-2.5 py-1 rounded-md bg-blue-600 hover:bg-blue-500 text-white text-[11px] font-semibold flex items-center gap-1 transition shadow-xs cursor-pointer"
+              >
+                <Zap className="h-3 w-3" />
+                <span>Stage File</span>
+              </button>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-between p-2.5 rounded-lg bg-white border border-slate-200 shadow-xs">
+            <div>
+              <div className="text-xs font-semibold text-slate-800">Pharmacy Care (35 SKUs)</div>
+              <div className="text-[10px] text-slate-500">OTC, First Aid, Supplements, Devices</div>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <a
+                href="/sample_datasets/pharmacy_quick_care_35_skus.csv"
+                download="pharmacy_quick_care_35_skus.csv"
+                title="Download CSV"
+                className="p-1.5 rounded-md hover:bg-slate-100 text-slate-500 hover:text-slate-800 transition"
+              >
+                <Download className="h-3.5 w-3.5" />
+              </a>
+              <button
+                type="button"
+                onClick={() => stageSampleDataset("pharmacy_quick_care_35_skus.csv", "Pharmacy Care")}
+                className="px-2.5 py-1 rounded-md bg-blue-600 hover:bg-blue-500 text-white text-[11px] font-semibold flex items-center gap-1 transition shadow-xs cursor-pointer"
+              >
+                <Zap className="h-3 w-3" />
+                <span>Stage File</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Drag & Drop Zone */}
       <div

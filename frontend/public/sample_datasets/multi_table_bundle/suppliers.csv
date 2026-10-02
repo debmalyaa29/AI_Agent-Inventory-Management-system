@@ -1,0 +1,6 @@
+supplier_id,supplier_name,lead_time,min_order_quantity,pack_size
+SUPP-01,Apex Beverage Bottlers,2,24,12
+SUPP-02,Heritage Dairy Logistics,1,20,10
+SUPP-03,Artisan Bakers Alliance,1,10,5
+SUPP-04,Gourmet Snack Crafters,3,30,15
+SUPP-05,Metro Clean Supplies,2,20,10

@@ -1,0 +1,11 @@
+sku,product_name,category,unit_price,cost,supplier_id
+BEV-001,Sparkling Lime Soda 330ml,Beverages,45.0,28.0,SUPP-01
+BEV-002,Cold Brew Black 250ml,Beverages,120.0,80.0,SUPP-01
+DAI-001,Farm Fresh Whole Milk 1L,Dairy,65.0,50.0,SUPP-02
+DAI-002,Greek Yogurt Plain 200g,Dairy,80.0,55.0,SUPP-02
+BAK-001,Brioche Burger Buns 4pk,Bakery,95.0,60.0,SUPP-03
+BAK-002,Whole Wheat Sandwich Bread,Bakery,50.0,35.0,SUPP-03
+SNK-001,Truffle Sea Salt Crisps 125g,Snacks,140.0,95.0,SUPP-04
+SNK-002,Smoked Paprika Almonds 150g,Snacks,250.0,180.0,SUPP-04
+HOU-001,Dishwash Citrus Liquid 500ml,Household,110.0,75.0,SUPP-05
+HOU-002,Eco Bamboo Paper Towels 2pk,Household,160.0,110.0,SUPP-05

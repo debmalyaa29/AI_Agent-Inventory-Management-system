@@ -10,7 +10,8 @@ import {
   ArrowRight,
   Sparkles,
   Layers,
-  UploadCloud
+  UploadCloud,
+  Download
 } from "lucide-react";
 import { api } from "@/lib/api";
 import { PageHeader } from "@/components/ui/PageHeader";
@@ -22,15 +23,37 @@ import { EmptyState, Skeleton } from "@/components/ui/EmptyState";
 export default function DatasetsListPage() {
   const [datasets, setDatasets] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [seeding, setSeeding] = useState(false);
 
-  useEffect(() => {
+  const fetchDatasets = () => {
     api.getDatasets()
       .then((data) => {
         setDatasets(data || []);
         setLoading(false);
       })
       .catch(() => setLoading(false));
+  };
+
+  useEffect(() => {
+    fetchDatasets();
   }, []);
+
+  const handleLoadSample = async () => {
+    setSeeding(true);
+    try {
+      const sample = await api.createSampleDataset();
+      if (sample?.id) {
+        localStorage.setItem("active_dataset_id", sample.id);
+        window.dispatchEvent(new Event("datasetChanged"));
+        window.location.href = `/dashboard`;
+      } else {
+        fetchDatasets();
+      }
+    } catch (e) {
+      console.error("Failed to load sample dataset:", e);
+      setSeeding(false);
+    }
+  };
 
   return (
     <div className="space-y-6">
@@ -38,11 +61,21 @@ export default function DatasetsListPage() {
         title="Facility Data Sources"
         description="Dark store dataset connections, DuckDB schemas, data quality metrics, and ML model synchronization."
         actions={
-          <Link href="/datasets/new">
-            <Button variant="primary" leftIcon={<Plus className="h-4 w-4" />}>
-              New Facility Dataset
-            </Button>
-          </Link>
+          <div className="flex items-center gap-2">
+            <a
+              href="/darkstore_inventory_demo.csv"
+              download="darkstore_inventory_demo.csv"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-300 bg-white hover:bg-slate-50 text-xs font-semibold text-slate-700 transition shadow-xs"
+            >
+              <Download className="h-3.5 w-3.5" />
+              <span>Download Demo CSV</span>
+            </a>
+            <Link href="/datasets/new">
+              <Button variant="primary" leftIcon={<Plus className="h-4 w-4" />}>
+                New Facility Dataset
+              </Button>
+            </Link>
+          </div>
         }
       />
 
@@ -56,13 +89,29 @@ export default function DatasetsListPage() {
         <EmptyState
           icon={<Database className="h-10 w-10 text-slate-400" />}
           title="No Datasets Connected"
-          description="Upload CSV or Parquet files from your ERP or WMS to initialize decision intelligence."
+          description="Upload CSV or Parquet files from your ERP or WMS to initialize decision intelligence, or download our ready-to-use demo dataset."
           action={
-            <Link href="/datasets/new">
-              <Button variant="primary" size="sm">
-                Create First Dataset
+            <div className="flex flex-col sm:flex-row items-center gap-2.5 mt-2">
+              <Link href="/datasets/new">
+                <Button variant="primary" size="sm">
+                  Create First Dataset
+                </Button>
+              </Link>
+              <a href="/darkstore_inventory_demo.csv" download="darkstore_inventory_demo.csv">
+                <Button variant="outline" size="sm" leftIcon={<Download className="h-3.5 w-3.5" />}>
+                  Download Demo CSV
+                </Button>
+              </a>
+              <Button
+                variant="secondary"
+                size="sm"
+                onClick={handleLoadSample}
+                disabled={seeding}
+                leftIcon={<Sparkles className="h-3.5 w-3.5 text-blue-600" />}
+              >
+                {seeding ? "Loading Store..." : "1-Click Load Sample Store"}
               </Button>
-            </Link>
+            </div>
           }
         />
       ) : (

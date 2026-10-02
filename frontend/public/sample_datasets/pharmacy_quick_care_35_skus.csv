@@ -1,0 +1,36 @@
+item_code,product_name,category,store_code,available_qty,expected_inventory,daily_demand,retail_price,cost_price,delivery_days,moq,pack_size,supplier_name,test_case_note
+PARACETAMOL-650-15T,Paracetamol 650mg Fever & Pain 15 Tablets,OTC Medicines,PHARMACY_HUB,4,4,35.0,32.0,18.0,1,50,25,Apex Pharma Distribution,CRITICAL_LOW_STOCK: Rapid burn rate fast mover
+IBUPROFEN-400-10T,Ibuprofen 400mg Anti-inflammatory 10s,OTC Medicines,PHARMACY_HUB,0,0,18.0,45.0,26.0,1,30,15,Apex Pharma Distribution,STOCKOUT_ZERO_STOCK: High demand painkiller out of stock
+DIGESTIVE-ANTACID-GEL,Mint Cooling Antacid Oral Gel 200ml,OTC Medicines,PHARMACY_HUB,-3,-3,14.0,140.0,90.0,2,20,10,HealCare Labs,NEGATIVE_INVENTORY_ANOMALY: Inventory scan deficit
+VITAMIN-C-1000MG-20T,Effervescent Vitamin C + Zinc 20 Tablets,Supplements,PHARMACY_HUB,85,25,4.0,395.0,240.0,3,20,10,Zenith Health Direct,PHANTOM_INVENTORY: Recorded 85 vs physical 25 (+60 ghost units)
+GLUCOSE-MONITOR-STRIPS,Blood Glucose Test Strips 50s,Medical Devices,PHARMACY_HUB,6,20,3.0,850.0,620.0,2,10,5,Apex Pharma Distribution,SHRINKAGE_HIGH_VALUE: High ticket missing strips
+DIGITAL-THERMOMETER,Rapid Flexible Tip Digital Thermometer,Medical Devices,PHARMACY_HUB,280,280,0.5,299.0,160.0,4,15,5,HealCare Labs,SEVERE_OVERSTOCK: 560 days of trapped supply
+BANDAGE-WATERPROOF-20PK,Waterproof Sterile Adhesive Bandages 20s,First Aid,PHARMACY_HUB,8,8,22.0,75.0,42.0,1,30,10,HealCare Labs,HIGH_REORDER_URGENCY: Low stock on daily essential
+ANTISEPTIC-LIQUID-500ML,Hospital Grade Antiseptic Disinfectant 500ml,First Aid,PHARMACY_HUB,12,12,16.0,180.0,115.0,2,24,12,Apex Pharma Distribution,REORDER_TRIGGER: Steady demand first aid
+COUGH-SYRUP-HERBAL-100ML,Herbal Non-Drowsy Cough Relief Syrup 100ml,OTC Medicines,PHARMACY_HUB,5,5,20.0,115.0,72.0,1,25,10,HealCare Labs,CRITICAL_LOW_STOCK: Seasonal surge burn rate
+NASAL-DECONGESTANT-SPRAY,Fast Acting Saline Nasal Spray 15ml,OTC Medicines,PHARMACY_HUB,7,7,15.0,95.0,58.0,2,20,10,Apex Pharma Distribution,HIGH_REORDER_URGENCY: Low stock with lead time 2 days
+BABY-FORMULA-STAGE1-400G,Infant Nutrition Stage 1 Formula 400g Tin,Baby Health,PHARMACY_HUB,9,9,12.0,475.0,370.0,2,12,4,Pure Nutrition Life,BALANCED_REORDER: High value infant staple
+DIAPER-RASH-CREAM-50G,Zinc Oxide Soothing Diaper Rash Cream 50g,Baby Health,PHARMACY_HUB,14,14,6.0,165.0,105.0,3,15,5,Gentle Care Labs,HEALTHY_STOCK: Optimal 2+ weeks buffer
+FACE-MASKS-N95-5PK,Breathable N95 Particle Filter Masks 5s,Safety & Hygiene,PHARMACY_HUB,450,450,1.0,250.0,120.0,5,50,25,HealCare Labs,SEVERE_OVERSTOCK: Post-pandemic excess inventory
+HAND-SANITIZER-100ML,70% Isopropyl Alcohol Instant Sanitizer 100ml,Safety & Hygiene,PHARMACY_HUB,35,35,10.0,50.0,25.0,1,50,25,HealCare Labs,HEALTHY_STOCK: Standard stock balance
+ORAL-REHYDRATION-SALT-5PK,Electrolyte ORS Hydration Sachet 5-Pack,OTC Medicines,PHARMACY_HUB,60,60,25.0,40.0,22.0,1,100,50,Apex Pharma Distribution,BALANCED_STOCK: Fast turnaround electrolyte
+MULTIVITAMIN-DAILY-60CAPS,Complete Daily Multivitamins for Adults 60s,Supplements,PHARMACY_HUB,24,24,5.0,599.0,360.0,3,12,6,Zenith Health Direct,HEALTHY_STOCK: High margin wellness category
+FISH-OIL-OMEGA3-60CAPS,Triple Strength Omega-3 Fish Oil 1000mg 60s,Supplements,PHARMACY_HUB,19,19,4.0,799.0,480.0,3,12,6,Zenith Health Direct,HEALTHY_STOCK: Premium health supplement
+CALCIUM-D3-TABLETS-30S,Calcium Citrate Malate + Vitamin D3 30s,Supplements,PHARMACY_HUB,30,30,6.0,290.0,175.0,3,15,5,Zenith Health Direct,HEALTHY_STOCK: Regular replenishment schedule
+MEDICATED-SOAP-100G,Antibacterial Chlorhexidine Bathing Soap 100g,Personal Care,PHARMACY_HUB,28,28,8.0,85.0,52.0,2,24,12,HealCare Labs,HEALTHY_STOCK: Good inventory health
+VAPOR-RUB-OINTMENT-50G,Camphor & Menthol Chest Vapor Rub 50g,OTC Medicines,PHARMACY_HUB,18,18,7.5,130.0,80.0,2,20,10,Apex Pharma Distribution,BALANCED_STOCK: Steady cold care mover
+EYE-DROPS-LUBRICATING-10ML,Carboxymethylcellulose Soothing Eye Drops 10ml,Eye Care,PHARMACY_HUB,11,11,8.0,150.0,92.0,2,20,10,Apex Pharma Distribution,REORDER_TRIGGER: 1.3 days of supply remaining
+EAR-DROPS-WAX-REMOVAL,Gentle Hydrogen Peroxide Ear Wax Drops 15ml,Ear Care,PHARMACY_HUB,16,16,3.5,120.0,75.0,3,10,5,Apex Pharma Distribution,HEALTHY_STOCK: Steady specialty item
+SUNSCREEN-SPF50-100ML,Ultra-Light Matte Sunscreen Lotion SPF 50,Dermatology,PHARMACY_HUB,22,22,6.5,450.0,280.0,3,12,6,DermaScience Direct,HEALTHY_STOCK: High margin skincare
+HEALING-ALOE-GEL-150ML,Pure Organic Soothing Aloe Vera Gel 150ml,Dermatology,PHARMACY_HUB,32,32,5.0,199.0,120.0,3,15,5,DermaScience Direct,HEALTHY_STOCK: Consistent daily seller
+CREATINE-MONOHYDRATE-250G,Micronized Pure Creatine Monohydrate 250g,Sports Nutrition,PHARMACY_HUB,15,15,4.0,899.0,560.0,4,10,5,Peak Nutrition Direct,HEALTHY_STOCK: High ticket sports item
+ACIDITY-CHEWABLE-10S,Calcium Carbonate Fruit Antacid Chewables 10s,OTC Medicines,PHARMACY_HUB,45,45,15.0,25.0,14.0,1,50,25,Apex Pharma Distribution,BALANCED_STOCK: Fast impulse healthcare counter pick
+PAIN-RELIEF-SPRAY-50G,Instant Muscle & Joint Pain Relief Spray 50g,First Aid,PHARMACY_HUB,14,14,9.0,170.0,105.0,2,20,10,HealCare Labs,REORDER_TRIGGER: High velocity first aid
+STERILE-GAUZE-PADS-10PK,Sterile Cotton Wound Dressing Pads 10s,First Aid,PHARMACY_HUB,40,40,7.0,60.0,32.0,2,30,10,HealCare Labs,HEALTHY_STOCK: Basic medical consumable
+SURGICAL-TAPE-1INCH,"Micropore Breathable Paper Surgical Tape 1""",First Aid,PHARMACY_HUB,25,25,5.5,45.0,25.0,2,20,10,HealCare Labs,HEALTHY_STOCK: Clinical essential
+HOT-WATER-BOTTLE-RUBBER,Durable Natural Rubber Hot Water Bag 2L,Medical Devices,PHARMACY_HUB,12,12,2.5,280.0,160.0,4,10,5,HealCare Labs,HEALTHY_STOCK: Stable winter homecare SKU
+ICE-PACK-GEL-REUSABLE,Flexible Contoured Reusable Cold Compress,First Aid,PHARMACY_HUB,18,18,3.0,220.0,130.0,3,10,5,HealCare Labs,HEALTHY_STOCK: Regular sports first aid
+BABY-TEETHING-GEL-15G,Natural Chamomile Baby Soothing Teething Gel,Baby Health,PHARMACY_HUB,8,8,4.0,185.0,115.0,3,10,5,Gentle Care Labs,REORDER_TRIGGER: Safe stock minimum reached
+PREGNANCY-TEST-KIT-1S,Rapid One-Step Early Pregnancy Test Card,Diagnostics,PHARMACY_HUB,26,26,12.0,99.0,45.0,2,25,10,Apex Pharma Distribution,BALANCED_STOCK: High margin quick commerce diagnostic
+CHOLESTEROL-CHECK-STRIPS,Self-Testing Cholesterol Test Strips 10s,Diagnostics,PHARMACY_HUB,5,5,1.5,1100.0,820.0,5,5,1,Apex Pharma Distribution,LOW_STOCK_HIGH_VALUE: High ticket diagnostic inventory
+HERBAL-SLEEP-AID-30CAPS,Melatonin + Valerian Root Sleep Support 30s,Supplements,PHARMACY_HUB,20,20,4.5,499.0,290.0,3,12,6,Zenith Health Direct,HEALTHY_STOCK: High growth wellness line

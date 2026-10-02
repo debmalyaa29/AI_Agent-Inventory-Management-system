@@ -1,0 +1,51 @@
+sku,product_name,category,store_id,current_inventory,expected_inventory,daily_demand,unit_price,cost,lead_time,min_order_quantity,pack_size,supplier_name
+BEV-RED-ENERGY-60ML,Red Thunder Energy Shot 60ml,Beverages,STORE_ALPHA,3,3,28.0,90.0,60.0,2,24,12,Metro Beverage Bottlers
+PROD-AVOCADO-HASS-2PK,Hass Avocado 2-Pack Ready-to-Eat,Fresh Produce,STORE_ALPHA,2,2,16.0,160.0,110.0,1,15,5,Fresh Harvest Produce
+DAI-ALMOND-MILK-1L,Organic Unsweetened Almond Milk 1L,Dairy,STORE_ALPHA,4,4,22.0,195.0,140.0,2,20,10,Pure Dairy Express
+BAK-BRIOCHE-BUNS-4PK,Handcrafted French Brioche Buns 4pk,Bakery,STORE_ALPHA,1,1,15.0,120.0,75.0,1,10,5,Artisan Bakery Network
+PROD-BANANAS-ROBUSTA-1KG,Fresh Robusta Bananas 1kg,Fresh Produce,STORE_ALPHA,5,5,34.0,55.0,35.0,1,30,10,Fresh Harvest Produce
+FROZ-ICE-CREAM-VANILLA-500ML,Bourbon Vanilla Bean Ice Cream 500ml,Frozen & Dairy,STORE_ALPHA,2,2,14.0,280.0,190.0,2,12,6,Frozen Delights Co
+INST-VOLCANO-RAMEN-120G,Spicy Volcano Korean Ramen 120g,Instant Foods,STORE_ALPHA,6,6,42.0,75.0,48.0,2,48,24,Asian Pantry Imports
+DAI-ORGANIC-EGGS-6PK,Pasture Raised Brown Eggs 6-Pack,Dairy & Eggs,STORE_ALPHA,0,0,18.0,110.0,80.0,1,20,10,Pure Dairy Express
+BEV-COLD-BREW-BLACK-250ML,Nitro Cold Brew Black Coffee 250ml,Beverages,STORE_ALPHA,0,0,25.0,130.0,90.0,2,24,12,Metro Beverage Bottlers
+BABY-WATER-WIPES-80S,Fragrance-Free Pure Water Baby Wipes 80s,Baby Care,STORE_ALPHA,0,0,12.0,185.0,125.0,3,16,8,Gentle Care Labs
+DAI-GREEK-YOGURT-ZERO-150G,Zero Fat Greek Yogurt Pot 150g,Dairy,STORE_ALPHA,-2,-2,14.0,75.0,50.0,1,20,10,Pure Dairy Express
+DAI-ORGANIC-FIRM-TOFU-200G,Organic Firm High-Protein Tofu 200g,Dairy Alternatives,STORE_ALPHA,-1,-1,9.0,95.0,65.0,2,15,5,Green Leaf Organics
+PAN-EXTRA-VIRGIN-OLIVE-OIL-500ML,Cold Pressed Extra Virgin Olive Oil 500ml,Pantry,STORE_ALPHA,45,15,3.0,650.0,480.0,3,12,6,Heritage Oils & Vinegars
+BEV-MATCHA-CEREMONIAL-50G,Ceremonial Grade Japanese Matcha 50g,Beverages,STORE_ALPHA,10,28,4.0,550.0,380.0,4,10,5,Zenith Tea Imports
+NUT-WHEY-PROTEIN-CHOCO-1KG,Ultra-Filtered Whey Protein Chocolate 1kg,Nutrition,STORE_ALPHA,18,30,2.5,2400.0,1750.0,4,6,2,Peak Nutrition Direct
+SPI-KASHMIRI-SAFFRON-1G,Kashmiri Mongra Saffron 1g Sealed,Spices,STORE_ALPHA,5,25,1.0,490.0,340.0,5,10,5,Himalayan Spice Co
+HOU-LAUNDRY-DETERGENT-5KG,Ultra Clean Laundry Detergent 5kg,Household,STORE_ALPHA,340,340,1.2,520.0,380.0,3,10,5,Metro Essentials
+GEN-PARTY-STREAMERS-NEON,Neon Birthday Party Streamers,General,STORE_ALPHA,480,480,0.4,150.0,90.0,5,20,10,Global Novelties
+SEA-FAIRY-LIGHTS-10M,Warm White Fairy String Lights 10m,Seasonal,STORE_ALPHA,210,210,0.2,350.0,210.0,7,25,10,Global Novelties
+PER-HIMALAYAN-BATH-SALTS-1KG,Relaxing Himalayan Bath Salts 1kg,Personal Care,STORE_ALPHA,175,175,0.5,420.0,270.0,4,12,6,Aroma Wellness
+BEV-COLD-BREW-OAT-LATTE-250ML,Nitro Cold Brew Oat Milk Latte 250ml,Beverages,STORE_ALPHA,6,6,24.0,135.0,95.0,2,24,12,Metro Beverage Bottlers
+BEV-MINERAL-SPRING-WATER-1L,Alkaline Mineral Spring Water 1L,Beverages,STORE_ALPHA,8,8,30.0,45.0,28.0,2,48,24,Metro Beverage Bottlers
+BAK-SAN-FRANCISCO-SOURDOUGH,Artisan San Francisco Sourdough Loaf,Bakery,STORE_ALPHA,4,4,14.0,140.0,90.0,1,10,5,Artisan Bakery Network
+BABY-AIR-DIAPERS-M-44PK,Ultra Soft Air-Through Diapers Size M 44s,Baby Care,STORE_ALPHA,5,5,11.0,799.0,580.0,3,12,4,Gentle Care Labs
+PROD-CHERRY-TOMATOES-250G,Sweet Cherry Vine Tomatoes 250g,Fresh Produce,STORE_ALPHA,7,7,22.0,90.0,60.0,1,20,10,Fresh Harvest Produce
+BEV-COCA-COLA-500ML,Coca-Cola Classic 500ml Bottle,Beverages,STORE_ALPHA,18,18,32.0,40.0,28.0,2,24,12,Metro Beverage Bottlers
+DAI-HOMOGENIZED-MILK-1L,Fresh Whole Homogenized Milk 1L,Dairy,STORE_ALPHA,14,14,35.0,65.0,50.0,1,20,10,Pure Dairy Express
+SNK-SEA-SALT-CHIPS-150G,Classic Sea Salt Potato Crisps 150g,Snacks,STORE_ALPHA,120,120,8.0,30.0,20.0,3,50,25,Crisp Snack Distributors
+SNK-DARK-CHOCOLATE-70PCT-80G,Single Origin 70% Dark Chocolate 80g,Snacks,STORE_ALPHA,65,65,5.0,60.0,42.0,3,50,25,Crisp Snack Distributors
+BEV-SPARKLING-LIME-WATER-500ML,Lime Sparkling Mineral Water 500ml,Beverages,STORE_ALPHA,22,22,12.0,50.0,32.0,2,24,12,Metro Beverage Bottlers
+BAK-BUTTER-CROISSANT-2PK,All-Butter French Croissant 2-Pack,Bakery,STORE_ALPHA,5,5,12.0,85.0,60.0,1,10,5,Artisan Bakery Network
+SNK-ROASTED-CASHEWS-200G,Salted Jumbo Roasted Cashews 200g,Snacks,STORE_ALPHA,15,15,6.0,290.0,210.0,2,20,10,Crisp Snack Distributors
+BEV-SENCHA-GREEN-TEA-25S,Organic Japanese Sencha Green Tea 25s,Beverages,STORE_ALPHA,32,32,3.5,180.0,120.0,3,15,5,Zenith Tea Imports
+DAI-SALTED-BUTTER-500G,Creamery Salted Pure Butter 500g,Dairy,STORE_ALPHA,16,16,15.0,275.0,215.0,1,20,10,Pure Dairy Express
+DAI-VACUUM-FRESH-PANEER-200G,Vacuum Packed Fresh Malai Paneer 200g,Dairy,STORE_ALPHA,11,11,26.0,115.0,85.0,1,25,5,Pure Dairy Express
+PROD-HYDROPONIC-SPINACH-200G,Hydroponic Baby Spinach 200g,Fresh Produce,STORE_ALPHA,8,8,18.0,60.0,40.0,1,15,5,Fresh Harvest Produce
+PROD-WASHED-POTATOES-1KG,Farm Fresh Washed Table Potatoes 1kg,Fresh Produce,STORE_ALPHA,45,45,20.0,45.0,28.0,2,30,10,Fresh Harvest Produce
+PROD-RED-COOKING-ONIONS-1KG,Crisp Red Cooking Onions 1kg,Fresh Produce,STORE_ALPHA,40,40,22.0,40.0,25.0,2,30,10,Fresh Harvest Produce
+PROD-GALA-APPLES-4PK,Royal Gala Crisp Sweet Apples 4-Pack,Fresh Produce,STORE_ALPHA,12,12,14.0,180.0,125.0,2,16,4,Fresh Harvest Produce
+SNK-DOUBLE-CHOCO-COOKIES-150G,Chunky Double Chocolate Chip Cookies 150g,Snacks,STORE_ALPHA,38,38,9.0,85.0,55.0,2,24,12,Artisan Bakery Network
+SNK-TORTILLA-CHIPS-LIME-200G,Stone Ground Lime Tortilla Chips 200g,Snacks,STORE_ALPHA,24,24,8.5,110.0,75.0,3,20,10,Crisp Snack Distributors
+PAN-ROASTED-SALSA-MILD-300G,Fire Roasted Mild Tomato Salsa 300g,Pantry,STORE_ALPHA,19,19,4.0,175.0,120.0,3,12,6,Heritage Oils & Vinegars
+PAN-CRUNCHY-PEANUT-BUTTER-400G,All Natural Roasted Peanut Butter 400g,Pantry,STORE_ALPHA,28,28,5.2,220.0,155.0,3,12,6,Metro Essentials
+BRK-ROLLED-OATS-1KG,Whole Grain Gluten-Free Rolled Oats 1kg,Breakfast,STORE_ALPHA,35,35,6.0,210.0,150.0,3,15,5,Metro Essentials
+HOU-DISHWASH-GEL-LIME-750ML,Concentrated Lime Dishwashing Gel 750ml,Household,STORE_ALPHA,14,14,7.5,145.0,100.0,2,20,10,Metro Essentials
+HOU-BAMBOO-TOILET-ROLLS-4PK,3-Ply Bamboo Ultra Soft Toilet Rolls 4s,Household,STORE_ALPHA,18,18,9.0,199.0,135.0,2,16,4,Metro Essentials
+PER-ALOE-HAND-WASH-500ML,Antibacterial Aloe Vera Hand Wash 500ml,Personal Care,STORE_ALPHA,22,22,6.0,130.0,85.0,3,20,10,Gentle Care Labs
+PER-HERBAL-TOOTHPASTE-150G,Complete Protection Herbal Toothpaste 150g,Personal Care,STORE_ALPHA,30,30,8.0,95.0,62.0,3,24,12,Gentle Care Labs
+PER-TEA-TREE-SHAMPOO-300ML,Tea Tree Anti-Dandruff Shampoo 300ml,Personal Care,STORE_ALPHA,15,15,4.5,299.0,200.0,3,12,6,Gentle Care Labs
+HOU-TRASH-BAGS-30L-30PK,Heavy Duty Biodegradable Garbage Bags 30s,Household,STORE_ALPHA,25,25,6.5,160.0,105.0,2,20,10,Metro Essentials

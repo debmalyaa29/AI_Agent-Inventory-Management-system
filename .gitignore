@@ -30,14 +30,12 @@ yarn-debug.log*
 yarn-error.log*
 
 # Data & Models
-data/raw/*
-!data/raw/.gitkeep
-data/processed/*
-!data/processed/.gitkeep
-data/artifacts/*
-!data/artifacts/.gitkeep
+data/raw/
+data/processed/
+data/artifacts/
 *.parquet
 *.duckdb
+*.duckdb.wal
 *.db
 *.sqlite*
 *.pkl
@@ -54,3 +52,11 @@ data/artifacts/*
 .idea/
 *.swp
 *.swo
+
+# AI Agent config
+.agent/
+.gemini/
+
+# Build cache
+tsconfig.tsbuildinfo
+frontend/tsconfig.tsbuildinfo

@@ -12,7 +12,9 @@ from app.optimization.priority import rank_action_queue
 
 
 def test_scenario_stress_dataset():
-    csv_path = Path("c:/build_with_ai/data/test_scenario/unified_inventory_stress_test.csv")
+    csv_path = backend_dir.parent / "data" / "test_scenario" / "unified_inventory_stress_test.csv"
+    if not csv_path.exists():
+        csv_path = Path("c:/build_with_ai/data/test_scenario/unified_inventory_stress_test.csv")
     assert csv_path.exists(), f"Test dataset not found at {csv_path}"
 
     df = pd.read_csv(csv_path)

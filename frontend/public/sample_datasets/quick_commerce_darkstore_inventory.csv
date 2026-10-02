@@ -1,0 +1,51 @@
+item_code,product_name,category,store_code,available_qty,expected_inventory,daily_demand,retail_price,cost_price,delivery_days,moq,pack_size,supplier_name,test_case_note
+ENERGY-SHOT-60ML,Red Thunder Energy Shot 60ml,Beverages,DARKSTORE_01,3,3,28.0,90.0,60.0,2,24,12,Metro Beverage Bottlers,CRITICAL_LOW_STOCK: 3 units left vs 28/day demand (~2.5h supply)
+AVOCADO-HASS-2PK,Hass Avocado 2-Pack Ready to Eat,Fresh Produce,DARKSTORE_01,2,2,16.0,160.0,110.0,1,15,5,Fresh Harvest Produce,CRITICAL_LOW_STOCK: 2 units left vs 16/day demand (~3.0h supply)
+ALMOND-MILK-1L,Organic Unsweetened Almond Milk 1L,Dairy Alternatives,DARKSTORE_01,4,4,22.0,195.0,140.0,2,20,10,Pure Dairy Express,CRITICAL_LOW_STOCK: 4 units left vs 22/day demand
+BREAD-BRIOCHE,Handcrafted French Brioche Loaf,Bakery,DARKSTORE_01,1,1,15.0,120.0,75.0,1,10,5,Artisan Bakery Network,CRITICAL_LOW_STOCK: 1 unit left vs 15/day demand; imminent stockout
+BANANAS-ROBUSTA-1KG,Fresh Robusta Bananas 1kg,Fresh Produce,DARKSTORE_01,5,5,34.0,55.0,35.0,1,30,10,Fresh Harvest Produce,CRITICAL_LOW_STOCK: Fast perishables burn rate
+ICE-CREAM-VANILLA-500ML,Artisanal Bourbon Vanilla Ice Cream 500ml,Frozen & Dairy,DARKSTORE_01,2,2,14.0,280.0,190.0,2,12,6,Frozen Delights Co,CRITICAL_LOW_STOCK: High-margin dessert low stock
+INSTANT-RAMEN-SPICY,Korean Volcano Spicy Ramen 120g,Instant Foods,DARKSTORE_01,6,6,42.0,75.0,48.0,2,48,24,Asian Pantry Imports,CRITICAL_LOW_STOCK: Viral staple running out rapidly
+ORGANIC-EGGS-6PK,Pasture Raised Brown Eggs 6-Pack,Dairy & Eggs,DARKSTORE_01,0,0,18.0,110.0,80.0,1,20,10,Pure Dairy Express,STOCKOUT_ZERO_STOCK: 0 units on hand; lost revenue
+COFFEE-COLD-BREW-CAN,Nitro Cold Brew Black Coffee 250ml,Beverages,DARKSTORE_01,0,0,25.0,130.0,90.0,2,24,12,Metro Beverage Bottlers,STOCKOUT_ZERO_STOCK: 0 units available; high velocity morning demand
+BABY-WIPES-80PK,Fragrance-Free Pure Water Baby Wipes 80s,Baby Care,DARKSTORE_01,0,0,12.0,185.0,125.0,3,16,8,Gentle Care Labs,STOCKOUT_ZERO_STOCK: Critical household essential out of stock
+GREEK-YOGURT-ZERO,Zero Fat Greek Yogurt Pot 150g,Dairy,DARKSTORE_01,-2,-2,14.0,75.0,50.0,1,20,10,Pure Dairy Express,NEGATIVE_INVENTORY_ANOMALY: -2 units system drift; barcode / scanning error
+TOFU-FIRM-200G,Organic Firm High Protein Tofu 200g,Dairy Alternatives,DARKSTORE_01,-1,-1,9.0,95.0,65.0,2,15,5,Green Leaf Organics,NEGATIVE_INVENTORY_ANOMALY: -1 unit recorded on hand
+PREMIUM-OLIVE-OIL-500ML,Extra Virgin Cold Pressed Olive Oil 500ml,Pantry,DARKSTORE_01,45,15,3.0,650.0,480.0,3,12,6,Heritage Oils & Vinegars,PHANTOM_INVENTORY_CRITICAL: Recorded 45 vs expected 15 (+30 ghost units)
+MATCHA-TEA-POWDER,Ceremonial Grade Matcha Powder 50g,Beverages,DARKSTORE_01,10,28,4.0,550.0,380.0,4,10,5,Zenith Tea Imports,SHRINKAGE_PHANTOM_INVENTORY: Recorded 10 vs expected 28 (-18 missing)
+WHEY-PROTEIN-CHOCO-1KG,Ultra-Filtered Whey Protein Chocolate 1kg,Nutrition,DARKSTORE_01,18,30,2.5,2400.0,1750.0,4,6,2,Peak Nutrition Direct,SHRINKAGE_HIGH_VALUE: High ticket theft or unlogged damage
+SAFFRON-THREADS-1G,Kashmiri Mongra Saffron 1g Sealed,Spices,DARKSTORE_01,5,25,1.0,490.0,340.0,5,10,5,Himalayan Spice Co,SHRINKAGE_MICRO_LUXURY: High shrinkage risk SKU
+BULK-DETERGENT-5KG,Ultra Clean Laundry Detergent 5kg,Household,DARKSTORE_01,340,340,1.2,520.0,380.0,3,10,5,Metro Essentials,SEVERE_OVERSTOCK: 340 units at 1.2/day = 283 days supply trapped
+FANCY-PARTY-STREAMERS,Neon Birthday Party Streamers,General,DARKSTORE_01,480,480,0.4,150.0,90.0,5,20,10,Global Novelties,"MASSIVE_OVERSTOCK: 480 units at 0.4/day = 1,200 days supply"
+CHRISTMAS-STRING-LIGHTS,Warm White Fairy String Lights 10m,Seasonal,DARKSTORE_01,210,210,0.2,350.0,210.0,7,25,10,Global Novelties,DEAD_STOCK: Off-season trapped capital
+MINERAL-BATH-SALTS-1KG,Relaxing Himalayan Bath Salts 1kg,Personal Care,DARKSTORE_01,175,175,0.5,420.0,270.0,4,12,6,Aroma Wellness,OVERSTOCK: 350 days of stock holding warehouse bin space
+COLD-BREW-LATTE,Nitro Cold Brew Oat Latte 250ml,Beverages,DARKSTORE_01,6,6,24.0,135.0,95.0,2,24,12,Metro Beverage Bottlers,HIGH_REORDER_URGENCY: Low stock with pack size 12 and MOQ 24
+MINERAL-WATER-1L,Alkaline Mineral Spring Water 1L,Beverages,DARKSTORE_01,8,8,30.0,45.0,28.0,2,48,24,Metro Beverage Bottlers,HIGH_REORDER_URGENCY: Low stock with pack size 24 and MOQ 48
+SOURDOUGH-LOAF,San Francisco Style Artisan Sourdough,Bakery,DARKSTORE_01,4,4,14.0,140.0,90.0,1,10,5,Artisan Bakery Network,HIGH_REORDER_URGENCY: Fresh bread reorder trigger
+BABY-DIAPERS-M-44PK,Ultra Soft Air-Through Diapers Size M 44s,Baby Care,DARKSTORE_01,5,5,11.0,799.0,580.0,3,12,4,Gentle Care Labs,HIGH_REORDER_URGENCY: Bulky high-turnover diaper SKU
+TOMATOES-CHERRY-250G,Sweet Cherry Vine Tomatoes 250g,Fresh Produce,DARKSTORE_01,7,7,22.0,90.0,60.0,1,20,10,Fresh Harvest Produce,HIGH_REORDER_URGENCY: Fresh perishable produce
+COKE-500,Coca-Cola 500ml Bottle,Beverages,DARKSTORE_01,18,18,32.0,40.0,28.0,2,24,12,Metro Beverage Bottlers,BALANCED_REGULAR_REORDER: High steady demand item
+MILK-1L,Fresh Whole Homogenized Milk 1L,Dairy,DARKSTORE_01,14,14,35.0,65.0,50.0,1,20,10,Pure Dairy Express,PERISHABLE_FAST_CYCLE: Daily milk delivery cycle
+CHIPS-150G,Classic Sea Salt Potato Chips 150g,Snacks,DARKSTORE_01,120,120,8.0,30.0,20.0,3,50,25,Crisp Snack Distributors,HEALTHY_STOCK: Optimal 15 days buffer stock
+DARK-CHOCOLATE-BAR,Single Origin 70% Dark Chocolate 80g,Snacks,DARKSTORE_01,65,65,5.0,60.0,42.0,3,50,25,Crisp Snack Distributors,HEALTHY_STOCK: Balanced target safety band
+SPARKLING-WATER-500ML,Lime Flavored Sparkling Water 500ml,Beverages,DARKSTORE_01,22,22,12.0,50.0,32.0,2,24,12,Metro Beverage Bottlers,HEALTHY_STOCK: Optimal stock level
+CROISSANT-2PK,All-Butter French Croissant 2-Pack,Bakery,DARKSTORE_01,5,5,12.0,85.0,60.0,1,10,5,Artisan Bakery Network,SHORT_SHELF_LIFE_REORDER: Fresh bakery turnover
+ROASTED-CASHEWS-200G,Salted Jumbo Roasted Cashews 200g,Snacks,DARKSTORE_01,15,15,6.0,290.0,210.0,2,20,10,Crisp Snack Distributors,NORMAL_REORDER: Standard reorder point trigger
+GREEN-TEA-BOX,Organic Japanese Sencha Green Tea 25s,Beverages,DARKSTORE_01,32,32,3.5,180.0,120.0,3,15,5,Zenith Tea Imports,HEALTHY_STOCK: Stable pantry commodity
+BUTTER-SALTED-500G,Creamery Salted Pure Butter 500g,Dairy,DARKSTORE_01,16,16,15.0,275.0,215.0,1,20,10,Pure Dairy Express,FAST_CYCLE: Daily dairy requirement
+PANEER-FRESH-200G,Vacuum Packed Fresh Malai Paneer 200g,Dairy,DARKSTORE_01,11,11,26.0,115.0,85.0,1,25,5,Pure Dairy Express,REORDER_SOON: 0.4 days supply remaining
+SPINACH-BUNCH,Hydroponic Baby Spinach 200g,Fresh Produce,DARKSTORE_01,8,8,18.0,60.0,40.0,1,15,5,Fresh Harvest Produce,FRESH_PERISHABLE: 1-day shelf life priority
+POTATOES-BAG-1KG,Farm Fresh Washed Table Potatoes 1kg,Fresh Produce,DARKSTORE_01,45,45,20.0,45.0,28.0,2,30,10,Fresh Harvest Produce,STAPLE: High volume staple vegetable
+ONIONS-RED-1KG,Crisp Red Cooking Onions 1kg,Fresh Produce,DARKSTORE_01,40,40,22.0,40.0,25.0,2,30,10,Fresh Harvest Produce,STAPLE: Fast cooking base commodity
+APPLES-ROYAL-GALA-4PK,Royal Gala Crisp Apples 4-Pack,Fresh Produce,DARKSTORE_01,12,12,14.0,180.0,125.0,2,16,4,Fresh Harvest Produce,HEALTHY_STOCK: Balanced fruit inventory
+CHOCO-CHIP-COOKIES-150G,Chunky Double Chocolate Chip Cookies 150g,Snacks,DARKSTORE_01,38,38,9.0,85.0,55.0,2,24,12,Artisan Bakery Network,HEALTHY_STOCK: Snack category regular
+TORTILLA-CHIPS-200G,Stone Ground Lime Tortilla Chips 200g,Snacks,DARKSTORE_01,24,24,8.5,110.0,75.0,3,20,10,Crisp Snack Distributors,BALANCED_STOCK: Steady party snack demand
+SALSA-DIP-MILD-300G,Fire Roasted Mild Tomato Salsa 300g,Pantry,DARKSTORE_01,19,19,4.0,175.0,120.0,3,12,6,Heritage Oils & Vinegars,HEALTHY_STOCK: Condiment safety buffer
+PEANUT-BUTTER-CRUNCHY,All Natural Roasted Peanut Butter 400g,Pantry,DARKSTORE_01,28,28,5.2,220.0,155.0,3,12,6,Metro Essentials,HEALTHY_STOCK: High shelf life staple
+OATS-ROLLED-1KG,Whole Grain Gluten-Free Rolled Oats 1kg,Breakfast,DARKSTORE_01,35,35,6.0,210.0,150.0,3,15,5,Metro Essentials,HEALTHY_STOCK: Morning breakfast cereal
+DISHWASH-GEL-750ML,Concentrated Lime Dishwashing Gel 750ml,Household,DARKSTORE_01,14,14,7.5,145.0,100.0,2,20,10,Metro Essentials,REORDER_TRIGGER: Approaching reorder safety threshold
+TOILET-ROLLS-4PK,3-Ply Bamboo Ultra Soft Toilet Rolls 4s,Household,DARKSTORE_01,18,18,9.0,199.0,135.0,2,16,4,Metro Essentials,BALANCED: Steady essential household reorder
+HAND-WASH-REFILL-500ML,Antibacterial Aloe Vera Hand Wash 500ml,Personal Care,DARKSTORE_01,22,22,6.0,130.0,85.0,3,20,10,Gentle Care Labs,HEALTHY_STOCK: Personal hygiene essential
+TOOTHPASTE-HERBAL-150G,Complete Protection Herbal Toothpaste 150g,Personal Care,DARKSTORE_01,30,30,8.0,95.0,62.0,3,24,12,Gentle Care Labs,HEALTHY_STOCK: Core personal care SKU
+SHAMPOO-ANTI-DANDRUFF,Tea Tree Anti-Dandruff Shampoo 300ml,Personal Care,DARKSTORE_01,15,15,4.5,299.0,200.0,3,12,6,Gentle Care Labs,BALANCED: Consistent hygiene staple
+TRASH-BAGS-30L-30PK,Heavy Duty Biodegradable Garbage Bags 30s,Household,DARKSTORE_01,25,25,6.5,160.0,105.0,2,20,10,Metro Essentials,HEALTHY_STOCK: Essential consumable supply
